@@ -15,7 +15,7 @@ import jetbrains.mps.editor.runtime.style.StyleAttributes;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
 import jetbrains.mps.openapi.editor.style.StyleRegistry;
 import jetbrains.mps.nodeEditor.MPSColors;
-import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Horizontal;
+import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Vertical;
 import jetbrains.mps.nodeEditor.cellProviders.AbstractCellListHandler;
 import jetbrains.mps.lang.editor.cellProviders.RefNodeListHandler;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
@@ -78,7 +78,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createCollection_1() {
-    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Vertical());
     editorCell.setCellId("Collection_x3qloy_c0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
@@ -87,17 +87,20 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createRefNodeList_0() {
-    AbstractCellListHandler handler = new emun_attributeListHandler_x3qloy_a2a(myNode, getEditorContext());
+    AbstractCellListHandler handler = new enum_attributeListHandler_x3qloy_a2a(myNode, getEditorContext());
     EditorCell_Collection editorCell = handler.createCells(new CellLayout_Indent(), false);
-    editorCell.setCellId("refNodeList_emun_attribute");
+    editorCell.setCellId("refNodeList_enum_attribute");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_CHILDREN_NEWLINE, true);
+    editorCell.getStyle().putAll(style);
     editorCell.setSRole(handler.getElementSRole());
     return editorCell;
   }
-  private static class emun_attributeListHandler_x3qloy_a2a extends RefNodeListHandler {
+  private static class enum_attributeListHandler_x3qloy_a2a extends RefNodeListHandler {
     @NotNull
     private SNode myNode;
 
-    public emun_attributeListHandler_x3qloy_a2a(SNode ownerNode, EditorContext context) {
+    public enum_attributeListHandler_x3qloy_a2a(SNode ownerNode, EditorContext context) {
       super(context, false);
       myNode = ownerNode;
     }
@@ -107,7 +110,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return myNode;
     }
     public SContainmentLink getSLink() {
-      return LINKS.emun_attribute$5cBK;
+      return LINKS.enum_attribute$5cBK;
     }
     public SAbstractConcept getChildSConcept() {
       return CONCEPTS.Enum_attribute$X0;
@@ -120,7 +123,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(emun_attributeListHandler_x3qloy_a2a.this.getNode(), LINKS.emun_attribute$5cBK));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(enum_attributeListHandler_x3qloy_a2a.this.getNode(), LINKS.enum_attribute$5cBK));
       try {
         EditorCell emptyCell = null;
         emptyCell = super.createEmptyCell();
@@ -168,7 +171,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink emun_attribute$5cBK = MetaAdapterFactory.getContainmentLink(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x11299d5d780b3071L, 0x11299d5d780c680dL, "emun_attribute");
+    /*package*/ static final SContainmentLink enum_attribute$5cBK = MetaAdapterFactory.getContainmentLink(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x11299d5d780b3071L, 0x11299d5d780c680dL, "enum_attribute");
   }
 
   private static final class CONCEPTS {

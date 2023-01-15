@@ -149,6 +149,18 @@
             </node>
           </node>
         </node>
+        <node concept="lc7rE" id="2VKtDE9fTOt" role="3cqZAp">
+          <node concept="l9S2W" id="2VKtDE9fX_c" role="lcghm">
+            <property role="XA4eZ" value="true" />
+            <property role="lbP0B" value="\n" />
+            <node concept="2OqwBi" id="2VKtDE9fXKi" role="lbANJ">
+              <node concept="117lpO" id="2VKtDE9fXCU" role="2Oq$k0" />
+              <node concept="3Tsc0h" id="2VKtDE9fY8l" role="2OqNvi">
+                <ref role="3TtcxE" to="5eok:14DBlPS3ljJ" resolve="enum" />
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
     </node>
   </node>
@@ -411,6 +423,102 @@
         </node>
         <node concept="lc7rE" id="14DBlPRYvL4" role="3cqZAp">
           <node concept="la8eA" id="14DBlPRYvRr" role="lcghm">
+            <property role="lacIc" value="}" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="WtQ9Q" id="2VKtDE9fc3v">
+    <ref role="WuzLi" to="5eok:14DBlPS2N1L" resolve="Enumeration" />
+    <node concept="11bSqf" id="2VKtDE9fcvK" role="11c4hB">
+      <node concept="3clFbS" id="2VKtDE9fcvL" role="2VODD2">
+        <node concept="lc7rE" id="2VKtDE9fcyf" role="3cqZAp">
+          <node concept="la8eA" id="2VKtDE9fc_8" role="lcghm">
+            <property role="lacIc" value="enum " />
+          </node>
+          <node concept="l9hG8" id="2VKtDE9fcGr" role="lcghm">
+            <node concept="2OqwBi" id="2VKtDE9fcRX" role="lb14g">
+              <node concept="117lpO" id="2VKtDE9fcJt" role="2Oq$k0" />
+              <node concept="3TrcHB" id="2VKtDE9fd9s" role="2OqNvi">
+                <ref role="3TsBF5" to="5eok:14DBlPS2Nby" resolve="name" />
+              </node>
+            </node>
+          </node>
+          <node concept="la8eA" id="2VKtDE9fdm5" role="lcghm">
+            <property role="lacIc" value=" {" />
+          </node>
+          <node concept="l8MVK" id="2VKtDE9fdxV" role="lcghm" />
+        </node>
+        <node concept="3izx1p" id="2VKtDE9fdEP" role="3cqZAp">
+          <node concept="3clFbS" id="2VKtDE9fdER" role="3izTki">
+            <node concept="1bpajm" id="2VKtDE9fdJC" role="3cqZAp" />
+            <node concept="3clFbF" id="2VKtDE9feZH" role="3cqZAp">
+              <node concept="2OqwBi" id="2VKtDE9fho1" role="3clFbG">
+                <node concept="2OqwBi" id="2VKtDE9ff8P" role="2Oq$k0">
+                  <node concept="117lpO" id="2VKtDE9feZG" role="2Oq$k0" />
+                  <node concept="3Tsc0h" id="2VKtDE9ffql" role="2OqNvi">
+                    <ref role="3TtcxE" to="5eok:14DBlPS36wd" resolve="enum_attribute" />
+                  </node>
+                </node>
+                <node concept="2es0OD" id="2VKtDE9fkFC" role="2OqNvi">
+                  <node concept="1bVj0M" id="2VKtDE9fkFE" role="23t8la">
+                    <node concept="3clFbS" id="2VKtDE9fkFF" role="1bW5cS">
+                      <node concept="lc7rE" id="2VKtDE9fnoV" role="3cqZAp">
+                        <node concept="l9hG8" id="2VKtDE9fny7" role="lcghm">
+                          <node concept="2OqwBi" id="2VKtDE9fnYI" role="lb14g">
+                            <node concept="37vLTw" id="2VKtDE9fnEQ" role="2Oq$k0">
+                              <ref role="3cqZAo" node="2VKtDE9fkFG" resolve="enum_attribute" />
+                            </node>
+                            <node concept="3TrcHB" id="2VKtDE9forf" role="2OqNvi">
+                              <ref role="3TsBF5" to="5eok:14DBlPS38Yj" resolve="enumKey" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="lc7rE" id="2VKtDE9fmNa" role="3cqZAp">
+                        <node concept="la8eA" id="2VKtDE9fmWk" role="lcghm">
+                          <property role="lacIc" value="( " />
+                        </node>
+                      </node>
+                      <node concept="lc7rE" id="2VKtDE9fliN" role="3cqZAp">
+                        <node concept="l9hG8" id="2VKtDE9floo" role="lcghm">
+                          <node concept="2OqwBi" id="2VKtDE9flLn" role="lb14g">
+                            <node concept="37vLTw" id="2VKtDE9flvH" role="2Oq$k0">
+                              <ref role="3cqZAo" node="2VKtDE9fkFG" resolve="enum_attribute" />
+                            </node>
+                            <node concept="3TrcHB" id="2VKtDE9fmcS" role="2OqNvi">
+                              <ref role="3TsBF5" to="5eok:14DBlPS3c0Z" resolve="enumValue" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="lc7rE" id="2VKtDE9fmtF" role="3cqZAp">
+                        <node concept="la8eA" id="2VKtDE9fmAp" role="lcghm">
+                          <property role="lacIc" value=" )" />
+                        </node>
+                      </node>
+                      <node concept="lc7rE" id="2VKtDE9fp7v" role="3cqZAp">
+                        <node concept="la8eA" id="2VKtDE9fpin" role="lcghm">
+                          <property role="lacIc" value="," />
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="Rh6nW" id="2VKtDE9fkFG" role="1bW2Oz">
+                      <property role="TrG5h" value="enum_attribute" />
+                      <node concept="2jxLKc" id="2VKtDE9fkFH" role="1tU5fm" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="lc7rE" id="2VKtDE9gkOF" role="3cqZAp">
+          <node concept="l8MVK" id="2VKtDE9gkXS" role="lcghm" />
+        </node>
+        <node concept="lc7rE" id="2VKtDE9g9wS" role="3cqZAp">
+          <node concept="la8eA" id="2VKtDE9g9Fh" role="lcghm">
             <property role="lacIc" value="}" />
           </node>
         </node>

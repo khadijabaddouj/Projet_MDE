@@ -27,10 +27,21 @@ public class file_TextGen extends TextGenDescriptorBase {
         }
       }
     }
+    {
+      Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.enum$FcY_);
+      final SNode lastItem = Sequence.fromIterable(collection).last();
+      for (SNode item : collection) {
+        tgs.appendNode(item);
+        if (item != lastItem) {
+          tgs.append("\n");
+        }
+      }
+    }
   }
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink conf$2x1p = MetaAdapterFactory.getContainmentLink(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x70721ca2c0d57be4L, 0x70721ca2c0df78f4L, "conf");
     /*package*/ static final SContainmentLink entity$QK3x = MetaAdapterFactory.getContainmentLink(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x70721ca2c0d57be4L, 0x70721ca2c0e9fe18L, "entity");
+    /*package*/ static final SContainmentLink enum$FcY_ = MetaAdapterFactory.getContainmentLink(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x70721ca2c0d57be4L, 0x11299d5d780d54efL, "enum");
   }
 }

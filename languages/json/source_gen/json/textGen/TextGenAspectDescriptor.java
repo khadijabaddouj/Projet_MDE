@@ -27,6 +27,8 @@ public class TextGenAspectDescriptor extends TextGenAspectBase {
         return new Configuration_TextGen();
       case LanguageConceptSwitch.Entity:
         return new Entity_TextGen();
+      case LanguageConceptSwitch.Enumeration:
+        return new Enumeration_TextGen();
       case LanguageConceptSwitch.file:
         return new file_TextGen();
     }

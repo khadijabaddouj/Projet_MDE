@@ -123,7 +123,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:d7a2d3ee-8e24-49f3-b446-7a6ae06181e3(json.structure)/1236692597461430385");
     b.version(3);
     b.property("name", 0x11299d5d780b32e2L).type(MetaIdFactory.dataTypeId(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x11299d5d78093682L)).origin("1236692597461431010").done();
-    b.aggregate("emun_attribute", 0x11299d5d780c680dL).target(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x11299d5d780c6b1bL).optional(true).ordered(true).multiple(true).origin("1236692597461510157").done();
+    b.aggregate("enum_attribute", 0x11299d5d780c680dL).target(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x11299d5d780c6b1bL).optional(true).ordered(true).multiple(true).origin("1236692597461510157").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForfile() {

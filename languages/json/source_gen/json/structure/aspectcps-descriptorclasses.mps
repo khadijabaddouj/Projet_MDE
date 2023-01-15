@@ -4646,7 +4646,7 @@
                         <node concept="liA8E" id="n9" role="2OqNvi">
                           <ref role="37wK5l" to="bzg8:~ConceptDescriptorBuilder2.aggregate(java.lang.String,long)" resolve="aggregate" />
                           <node concept="Xl_RD" id="na" role="37wK5m">
-                            <property role="Xl_RC" value="emun_attribute" />
+                            <property role="Xl_RC" value="enum_attribute" />
                           </node>
                           <node concept="1adDum" id="nb" role="37wK5m">
                             <property role="1adDun" value="0x11299d5d780c680dL" />

@@ -269,7 +269,7 @@
     <node concept="1TJgyj" id="14DBlPS36wd" role="1TKVEi">
       <property role="IQ2ns" value="1236692597461510157" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="emun_attribute" />
+      <property role="20kJfa" value="enum_attribute" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="14DBlPS36Gr" resolve="Enum_attribute" />
     </node>
