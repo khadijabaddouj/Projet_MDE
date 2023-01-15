@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="5fenol2uty4yllqvew9u2eyspd02qua">
-  <files names="Entity_TextGen.java:TextGenAspectDescriptor.java:conf_TextGen.java:file_TextGen.java" />
+<product version="3" modelHash="-3u0yajiortclrny8n93m0ax5s6ez9kf">
+  <files names="Configuration_TextGen.java:Entity_TextGen.java:TextGenAspectDescriptor.java:file_TextGen.java" />
 </product>
 

@@ -153,7 +153,7 @@
     </node>
   </node>
   <node concept="WtQ9Q" id="71M7ab0TkQr">
-    <ref role="WuzLi" to="5eok:71M7ab0RPzO" resolve="conf" />
+    <ref role="WuzLi" to="5eok:71M7ab0RPzO" resolve="Configuration" />
     <node concept="11bSqf" id="71M7ab0TkYZ" role="11c4hB">
       <node concept="3clFbS" id="71M7ab0TkZ0" role="2VODD2">
         <node concept="lc7rE" id="14DBlPRZRl8" role="3cqZAp">

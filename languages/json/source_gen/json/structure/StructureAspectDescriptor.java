@@ -14,17 +14,20 @@ import jetbrains.mps.smodel.adapter.ids.SConceptId;
 import jetbrains.mps.smodel.runtime.DataTypeDescriptor;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
-import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
+import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
+  /*package*/ final ConceptDescriptor myConceptConfiguration = createDescriptorForConfiguration();
   /*package*/ final ConceptDescriptor myConceptEntity = createDescriptorForEntity();
-  /*package*/ final ConceptDescriptor myConceptattribute = createDescriptorForattribute();
-  /*package*/ final ConceptDescriptor myConceptconf = createDescriptorForconf();
+  /*package*/ final ConceptDescriptor myConceptEntity_attribute = createDescriptorForEntity_attribute();
+  /*package*/ final ConceptDescriptor myConceptEnum_attribute = createDescriptorForEnum_attribute();
+  /*package*/ final ConceptDescriptor myConceptEnumeration = createDescriptorForEnumeration();
   /*package*/ final ConceptDescriptor myConceptfile = createDescriptorForfile();
-  /*package*/ final EnumerationDescriptor myEnumerationapplicationType = new EnumerationDescriptor_applicationType();
-  /*package*/ final EnumerationDescriptor myEnumerationattribute_types = new EnumerationDescriptor_attribute_types();
-  /*package*/ final ConstrainedStringDatatypeDescriptor myCSDatatypeentity_name = new ConstrainedStringDatatypeDescriptorImpl(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x11299d5d78093682L, "entity_name", "r:d7a2d3ee-8e24-49f3-b446-7a6ae06181e3(json.structure)/1236692597461300866", "[A-Z][a-z]*");
+  /*package*/ final EnumerationDescriptor myEnumerationapplicationtype_supported = new EnumerationDescriptor_applicationtype_supported();
+  /*package*/ final EnumerationDescriptor myEnumerationattribute_types_supported = new EnumerationDescriptor_attribute_types_supported();
+  /*package*/ final ConstrainedStringDatatypeDescriptor myCSDatatypeentity_name_regex = new ConstrainedStringDatatypeDescriptorImpl(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x11299d5d78093682L, "entity_name_regex", "r:d7a2d3ee-8e24-49f3-b446-7a6ae06181e3(json.structure)/1236692597461300866", "[A-Z][a-z]*");
+  /*package*/ final ConstrainedStringDatatypeDescriptor myCSDatatypeenumkey_regex = new ConstrainedStringDatatypeDescriptorImpl(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x2ef0769a893a53e5L, "enumkey_regex", "r:d7a2d3ee-8e24-49f3-b446-7a6ae06181e3(json.structure)/3382333726254584805", "[A-Z]*");
   private final LanguageConceptSwitch myIndexSwitch;
 
   public StructureAspectDescriptor() {
@@ -39,19 +42,23 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptEntity, myConceptattribute, myConceptconf, myConceptfile);
+    return Arrays.asList(myConceptConfiguration, myConceptEntity, myConceptEntity_attribute, myConceptEnum_attribute, myConceptEnumeration, myConceptfile);
   }
 
   @Override
   @Nullable
   public ConceptDescriptor getDescriptor(SConceptId id) {
     switch (myIndexSwitch.index(id)) {
+      case LanguageConceptSwitch.Configuration:
+        return myConceptConfiguration;
       case LanguageConceptSwitch.Entity:
         return myConceptEntity;
-      case LanguageConceptSwitch.attribute:
-        return myConceptattribute;
-      case LanguageConceptSwitch.conf:
-        return myConceptconf;
+      case LanguageConceptSwitch.Entity_attribute:
+        return myConceptEntity_attribute;
+      case LanguageConceptSwitch.Enum_attribute:
+        return myConceptEnum_attribute;
+      case LanguageConceptSwitch.Enumeration:
+        return myConceptEnumeration;
       case LanguageConceptSwitch.file:
         return myConceptfile;
       default:
@@ -61,35 +68,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<DataTypeDescriptor> getDataTypeDescriptors() {
-    return Arrays.asList(myEnumerationapplicationType, myEnumerationattribute_types, myCSDatatypeentity_name);
+    return Arrays.asList(myEnumerationapplicationtype_supported, myEnumerationattribute_types_supported, myCSDatatypeentity_name_regex, myCSDatatypeenumkey_regex);
   }
 
   /*package*/ int internalIndex(SAbstractConcept c) {
     return myIndexSwitch.index(c);
   }
 
-  private static ConceptDescriptor createDescriptorForEntity() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("json", "Entity", 0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x70721ca2c0e9f556L);
-    b.class_(false, false, false);
-    b.origin("r:d7a2d3ee-8e24-49f3-b446-7a6ae06181e3(json.structure)/8102570164939781462");
-    b.version(3);
-    b.property("name", 0x70721ca2c0e9f87dL).type(MetaIdFactory.dataTypeId(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x11299d5d78093682L)).origin("8102570164939782269").done();
-    b.aggregate("attribute", 0x70721ca2c0eb6808L).target(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x70721ca2c0eb538eL).optional(true).ordered(true).multiple(true).origin("8102570164939876360").done();
-    b.alias("entity");
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForattribute() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("json", "attribute", 0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x70721ca2c0eb538eL);
-    b.class_(false, false, false);
-    b.origin("r:d7a2d3ee-8e24-49f3-b446-7a6ae06181e3(json.structure)/8102570164939871118");
-    b.version(3);
-    b.property("name", 0x70721ca2c0eb5563L).type(PrimitiveTypeId.STRING).origin("8102570164939871587").done();
-    b.property("type", 0x70721ca2c0eb5739L).type(MetaIdFactory.dataTypeId(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x11299d5d7809625cL)).origin("8102570164939872057").done();
-    b.property("proprity", 0x70721ca2c0eb59fbL).type(PrimitiveTypeId.STRING).origin("8102570164939872763").done();
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForconf() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("json", "conf", 0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x70721ca2c0df58f4L);
+  private static ConceptDescriptor createDescriptorForConfiguration() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("json", "Configuration", 0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x70721ca2c0df58f4L);
     b.class_(false, false, false);
     b.origin("r:d7a2d3ee-8e24-49f3-b446-7a6ae06181e3(json.structure)/8102570164939086068");
     b.version(3);
@@ -101,12 +88,51 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("clientFramework", 0x70721ca2c0df7239L).type(PrimitiveTypeId.STRING).origin("8102570164939092537").done();
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForEntity() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("json", "Entity", 0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x70721ca2c0e9f556L);
+    b.class_(false, false, false);
+    b.origin("r:d7a2d3ee-8e24-49f3-b446-7a6ae06181e3(json.structure)/8102570164939781462");
+    b.version(3);
+    b.property("name", 0x70721ca2c0e9f87dL).type(MetaIdFactory.dataTypeId(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x11299d5d78093682L)).origin("8102570164939782269").done();
+    b.aggregate("attribute", 0x70721ca2c0eb6808L).target(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x70721ca2c0eb538eL).optional(true).ordered(true).multiple(true).origin("8102570164939876360").done();
+    b.alias("entity");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForEntity_attribute() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("json", "Entity_attribute", 0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x70721ca2c0eb538eL);
+    b.class_(false, false, false);
+    b.origin("r:d7a2d3ee-8e24-49f3-b446-7a6ae06181e3(json.structure)/8102570164939871118");
+    b.version(3);
+    b.property("name", 0x70721ca2c0eb5563L).type(PrimitiveTypeId.STRING).origin("8102570164939871587").done();
+    b.property("type", 0x70721ca2c0eb5739L).type(MetaIdFactory.dataTypeId(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x11299d5d7809625cL)).origin("8102570164939872057").done();
+    b.property("proprity", 0x70721ca2c0eb59fbL).type(PrimitiveTypeId.STRING).origin("8102570164939872763").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForEnum_attribute() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("json", "Enum_attribute", 0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x11299d5d780c6b1bL);
+    b.class_(false, false, false);
+    b.origin("r:d7a2d3ee-8e24-49f3-b446-7a6ae06181e3(json.structure)/1236692597461510939");
+    b.version(3);
+    b.property("enumKey", 0x11299d5d780c8f93L).type(MetaIdFactory.dataTypeId(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x2ef0769a893a53e5L)).origin("1236692597461520275").done();
+    b.property("enumValue", 0x11299d5d780cc03fL).type(PrimitiveTypeId.STRING).origin("1236692597461532735").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForEnumeration() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("json", "Enumeration", 0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x11299d5d780b3071L);
+    b.class_(false, false, false);
+    b.origin("r:d7a2d3ee-8e24-49f3-b446-7a6ae06181e3(json.structure)/1236692597461430385");
+    b.version(3);
+    b.property("name", 0x11299d5d780b32e2L).type(MetaIdFactory.dataTypeId(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x11299d5d78093682L)).origin("1236692597461431010").done();
+    b.aggregate("emun_attribute", 0x11299d5d780c680dL).target(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x11299d5d780c6b1bL).optional(true).ordered(true).multiple(true).origin("1236692597461510157").done();
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForfile() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("json", "file", 0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x70721ca2c0d57be4L);
     b.class_(false, false, true);
     b.origin("r:d7a2d3ee-8e24-49f3-b446-7a6ae06181e3(json.structure)/8102570164938439652");
     b.version(3);
     b.aggregate("conf", 0x70721ca2c0df78f4L).target(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x70721ca2c0df58f4L).optional(true).ordered(true).multiple(false).origin("8102570164939094260").done();
+    b.aggregate("enum", 0x11299d5d780d54efL).target(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x11299d5d780b3071L).optional(true).ordered(true).multiple(true).origin("1236692597461570799").done();
     b.aggregate("entity", 0x70721ca2c0e9fe18L).target(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x70721ca2c0e9f556L).optional(true).ordered(true).multiple(true).origin("8102570164939783704").done();
     return b.create();
   }

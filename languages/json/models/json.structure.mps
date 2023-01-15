@@ -59,7 +59,14 @@
       <property role="IQ2ns" value="8102570164939094260" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="conf" />
-      <ref role="20lvS9" node="71M7ab0RPzO" resolve="conf" />
+      <ref role="20lvS9" node="71M7ab0RPzO" resolve="Configuration" />
+    </node>
+    <node concept="1TJgyj" id="14DBlPS3ljJ" role="1TKVEi">
+      <property role="IQ2ns" value="1236692597461570799" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="enum" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="14DBlPS2N1L" resolve="Enumeration" />
     </node>
     <node concept="1TJgyj" id="71M7ab0UvSo" role="1TKVEi">
       <property role="IQ2ns" value="8102570164939783704" />
@@ -71,7 +78,7 @@
   </node>
   <node concept="1TIwiD" id="71M7ab0RPzO">
     <property role="EcuMT" value="8102570164939086068" />
-    <property role="TrG5h" value="conf" />
+    <property role="TrG5h" value="Configuration" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="71M7ab0RPB5" role="1TKVEl">
       <property role="IQ2nx" value="8102570164939086277" />
@@ -106,7 +113,7 @@
   </node>
   <node concept="25R3W" id="71M7ab0TS4H">
     <property role="3F6X1D" value="8102570164939620653" />
-    <property role="TrG5h" value="applicationType" />
+    <property role="TrG5h" value="applicationtype_supported" />
     <node concept="25R33" id="71M7ab0TS4I" role="25R1y">
       <property role="3tVfz5" value="8102570164939620654" />
       <property role="TrG5h" value="microservice" />
@@ -133,12 +140,12 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="attribute" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="71M7ab0UPee" resolve="attribute" />
+      <ref role="20lvS9" node="71M7ab0UPee" resolve="Entity_attribute" />
     </node>
   </node>
   <node concept="1TIwiD" id="71M7ab0UPee">
     <property role="EcuMT" value="8102570164939871118" />
-    <property role="TrG5h" value="attribute" />
+    <property role="TrG5h" value="Entity_attribute" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
     <node concept="1TJgyi" id="71M7ab0UPlz" role="1TKVEl">
       <property role="IQ2nx" value="8102570164939871587" />
@@ -158,12 +165,12 @@
   </node>
   <node concept="Az7Fb" id="14DBlPS2jq2">
     <property role="3F6X1D" value="1236692597461300866" />
-    <property role="TrG5h" value="entity_name" />
+    <property role="TrG5h" value="entity_name_regex" />
     <property role="FLfZY" value="[A-Z][a-z]*" />
   </node>
   <node concept="25R3W" id="14DBlPS2m9s">
     <property role="3F6X1D" value="1236692597461312092" />
-    <property role="TrG5h" value="attribute_types" />
+    <property role="TrG5h" value="attribute_types_supported" />
     <node concept="25R33" id="14DBlPS2m9t" role="25R1y">
       <property role="3tVfz5" value="1236692597461312093" />
       <property role="TrG5h" value="String" />
@@ -249,6 +256,43 @@
       <property role="TrG5h" value="TextBlob" />
       <property role="1L1pqM" value="TextBlob" />
     </node>
+  </node>
+  <node concept="1TIwiD" id="14DBlPS2N1L">
+    <property role="EcuMT" value="1236692597461430385" />
+    <property role="TrG5h" value="Enumeration" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyi" id="14DBlPS2Nby" role="1TKVEl">
+      <property role="IQ2nx" value="1236692597461431010" />
+      <property role="TrG5h" value="name" />
+      <ref role="AX2Wp" node="14DBlPS2jq2" resolve="entity_name_regex" />
+    </node>
+    <node concept="1TJgyj" id="14DBlPS36wd" role="1TKVEi">
+      <property role="IQ2ns" value="1236692597461510157" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="emun_attribute" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="14DBlPS36Gr" resolve="Enum_attribute" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="14DBlPS36Gr">
+    <property role="EcuMT" value="1236692597461510939" />
+    <property role="TrG5h" value="Enum_attribute" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyi" id="14DBlPS38Yj" role="1TKVEl">
+      <property role="IQ2nx" value="1236692597461520275" />
+      <property role="TrG5h" value="enumKey" />
+      <ref role="AX2Wp" node="2VKtDE9e_f_" resolve="enumkey_regex" />
+    </node>
+    <node concept="1TJgyi" id="14DBlPS3c0Z" role="1TKVEl">
+      <property role="IQ2nx" value="1236692597461532735" />
+      <property role="TrG5h" value="enumValue" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="Az7Fb" id="2VKtDE9e_f_">
+    <property role="3F6X1D" value="3382333726254584805" />
+    <property role="TrG5h" value="enumkey_regex" />
+    <property role="FLfZY" value="[A-Z]*" />
   </node>
 </model>
 

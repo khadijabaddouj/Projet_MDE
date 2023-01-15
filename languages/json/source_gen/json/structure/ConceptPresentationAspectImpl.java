@@ -9,9 +9,11 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
+  private ConceptPresentation props_Configuration;
   private ConceptPresentation props_Entity;
-  private ConceptPresentation props_attribute;
-  private ConceptPresentation props_conf;
+  private ConceptPresentation props_Entity_attribute;
+  private ConceptPresentation props_Enum_attribute;
+  private ConceptPresentation props_Enumeration;
   private ConceptPresentation props_file;
 
   @Override
@@ -19,6 +21,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   public ConceptPresentation getDescriptor(SAbstractConcept c) {
     StructureAspectDescriptor structureDescriptor = (StructureAspectDescriptor) myLanguageRuntime.getAspect(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.class);
     switch (structureDescriptor.internalIndex(c)) {
+      case LanguageConceptSwitch.Configuration:
+        if (props_Configuration == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Configuration");
+          props_Configuration = cpb.create();
+        }
+        return props_Configuration;
       case LanguageConceptSwitch.Entity:
         if (props_Entity == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -26,20 +35,27 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Entity = cpb.create();
         }
         return props_Entity;
-      case LanguageConceptSwitch.attribute:
-        if (props_attribute == null) {
+      case LanguageConceptSwitch.Entity_attribute:
+        if (props_Entity_attribute == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("attribute");
-          props_attribute = cpb.create();
+          cpb.rawPresentation("Entity_attribute");
+          props_Entity_attribute = cpb.create();
         }
-        return props_attribute;
-      case LanguageConceptSwitch.conf:
-        if (props_conf == null) {
+        return props_Entity_attribute;
+      case LanguageConceptSwitch.Enum_attribute:
+        if (props_Enum_attribute == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("conf");
-          props_conf = cpb.create();
+          cpb.rawPresentation("Enum_attribute");
+          props_Enum_attribute = cpb.create();
         }
-        return props_conf;
+        return props_Enum_attribute;
+      case LanguageConceptSwitch.Enumeration:
+        if (props_Enumeration == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Enumeration");
+          props_Enumeration = cpb.create();
+        }
+        return props_Enumeration;
       case LanguageConceptSwitch.file:
         if (props_file == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

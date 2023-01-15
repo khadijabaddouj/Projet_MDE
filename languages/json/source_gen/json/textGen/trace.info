@@ -62,8 +62,8 @@
       <unit id="1236692597460238845" at="18,0,57,0" name="json.textGen.Entity_TextGen" />
     </file>
     <file name="TextGenAspectDescriptor.java">
-      <node id="1236692597460238845" at="26,40,27,36" concept="7" />
-      <scope id="1236692597460238845" at="26,40,27,36" />
+      <node id="1236692597460238845" at="28,40,29,36" concept="7" />
+      <scope id="1236692597460238845" at="28,40,29,36" />
     </file>
   </root>
   <root nodeRef="r:a0c6dd5b-4ff5-4504-8685-b86da2328d11(json.textGen)/8102570164939435178">
@@ -126,11 +126,7 @@
     </file>
   </root>
   <root nodeRef="r:a0c6dd5b-4ff5-4504-8685-b86da2328d11(json.textGen)/8102570164939476379">
-    <file name="TextGenAspectDescriptor.java">
-      <node id="8102570164939476379" at="28,38,29,34" concept="7" />
-      <scope id="8102570164939476379" at="28,38,29,34" />
-    </file>
-    <file name="conf_TextGen.java">
+    <file name="Configuration_TextGen.java">
       <node id="8102570164939476379" at="15,54,16,55" concept="6" />
       <node id="1236692597460662151" at="16,55,17,30" concept="2" />
       <node id="1236692597460662852" at="17,30,18,18" concept="2" />
@@ -190,8 +186,12 @@
       <scope id="8102570164939476379" at="14,0,63,0">
         <var name="ctx" id="8102570164939476379" />
       </scope>
-      <unit id="8102570164939476379" at="64,0,72,0" name="json.textGen.conf_TextGen$PROPS" />
-      <unit id="8102570164939476379" at="13,0,73,0" name="json.textGen.conf_TextGen" />
+      <unit id="8102570164939476379" at="64,0,72,0" name="json.textGen.Configuration_TextGen$PROPS" />
+      <unit id="8102570164939476379" at="13,0,73,0" name="json.textGen.Configuration_TextGen" />
+    </file>
+    <file name="TextGenAspectDescriptor.java">
+      <node id="8102570164939476379" at="26,47,27,43" concept="7" />
+      <scope id="8102570164939476379" at="26,47,27,43" />
     </file>
   </root>
 </debug-info>
