@@ -10,6 +10,7 @@ import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.IVisitor;
 import org.jetbrains.mps.openapi.model.SNode;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations;
 import org.jetbrains.mps.openapi.language.SProperty;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
@@ -30,7 +31,7 @@ public class Entity_TextGen extends TextGenDescriptorBase {
         tgs.indent();
         tgs.append(SPropertyOperations.getString(attri, PROPS.name$byMG));
         tgs.append(" ");
-        tgs.append(SPropertyOperations.getString(attri, PROPS.type$ANaD));
+        tgs.append(SEnumOperations.getMemberName0(SPropertyOperations.getEnum(attri, PROPS.type$ANaD)));
         tgs.append(" ");
         tgs.append(SPropertyOperations.getString(attri, PROPS.proprity$ZzMb));
         tgs.newLine();

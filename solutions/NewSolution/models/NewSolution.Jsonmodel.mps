@@ -21,57 +21,30 @@
         <child id="8102570164939094260" name="conf" index="2KFmhm" />
       </concept>
       <concept id="8102570164939086068" name="json.structure.conf" flags="ng" index="2KFkhm">
+        <property id="8102570164939086903" name="applicationType" index="2KFk2l" />
         <property id="8102570164939086277" name="baseName" index="2KFklB" />
+        <property id="8102570164939092537" name="clientFramework" index="2KFmUr" />
+        <property id="8102570164939090841" name="prodDatabaseType" index="2KFnsV" />
+        <property id="8102570164939089354" name="authenticationType" index="2KFn_C" />
+        <property id="8102570164939088024" name="packageName" index="2KFnKU" />
       </concept>
     </language>
   </registry>
-  <node concept="2KDQt6" id="14DBlPS20kJ">
-    <node concept="2KFkhm" id="14DBlPS20nc" role="2KFmhm" />
-    <node concept="2KAYBO" id="14DBlPS20oQ" role="2KAYaU">
-      <property role="2KAYjv" value="jj" />
-      <node concept="2KAkWG" id="14DBlPS20rk" role="2KAniE">
-        <property role="2KAkB1" value="d" />
-        <property role="2KAkIr" value="dd" />
-        <property role="2KAklp" value="d" />
-      </node>
-      <node concept="2KAkWG" id="14DBlPS20uA" role="2KAniE">
-        <property role="2KAkB1" value="dd" />
-        <property role="2KAkIr" value="dd" />
-        <property role="2KAklp" value="d" />
-      </node>
+  <node concept="2KDQt6" id="14DBlPS2p7y">
+    <node concept="2KFkhm" id="14DBlPS2p9b" role="2KFmhm">
+      <property role="2KFklB" value="jjqk" />
+      <property role="2KFk2l" value="71M7ab0TSgW/gateway" />
+      <property role="2KFnKU" value="com.cjd.ms" />
+      <property role="2KFn_C" value="jwt" />
+      <property role="2KFnsV" value="mysql" />
+      <property role="2KFmUr" value="react" />
     </node>
-    <node concept="2KAYBO" id="14DBlPS20z7" role="2KAYaU">
-      <property role="2KAYjv" value="dd" />
-      <node concept="2KAkWG" id="14DBlPS20_C" role="2KAniE">
-        <property role="2KAkB1" value="g" />
-        <property role="2KAkIr" value="d" />
-        <property role="2KAklp" value="d" />
-      </node>
-    </node>
-  </node>
-  <node concept="2KDQt6" id="14DBlPS27Nt">
-    <node concept="2KFkhm" id="14DBlPS27OG" role="2KFmhm">
-      <property role="2KFklB" value="d" />
-    </node>
-    <node concept="2KAYBO" id="14DBlPS27R$" role="2KAYaU">
-      <property role="2KAYjv" value="jj" />
-      <node concept="2KAkWG" id="14DBlPS27Us" role="2KAniE">
-        <property role="2KAkB1" value="hdj" />
-        <property role="2KAkIr" value="dk" />
-        <property role="2KAklp" value="dkd" />
-      </node>
-    </node>
-    <node concept="2KAYBO" id="14DBlPS281o" role="2KAYaU">
+    <node concept="2KAYBO" id="14DBlPS2pmd" role="2KAYaU">
       <property role="2KAYjv" value="Person" />
-      <node concept="2KAkWG" id="14DBlPS2856" role="2KAniE">
-        <property role="2KAkB1" value="name" />
-        <property role="2KAkIr" value="string" />
+      <node concept="2KAkWG" id="14DBlPS2pr7" role="2KAniE">
+        <property role="2KAkB1" value="jjs" />
+        <property role="2KAkIr" value="14DBlPS2m9t/String" />
         <property role="2KAklp" value="required" />
-      </node>
-      <node concept="2KAkWG" id="14DBlPS28be" role="2KAniE">
-        <property role="2KAkB1" value="email" />
-        <property role="2KAkIr" value="string" />
-        <property role="2KAklp" value="unique" />
       </node>
     </node>
   </node>

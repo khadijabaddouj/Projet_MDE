@@ -19,6 +19,9 @@
       <concept id="1082978164218" name="jetbrains.mps.lang.structure.structure.DataTypeDeclaration" flags="ng" index="AxPO6">
         <property id="7791109065626895363" name="datatypeId" index="3F6X1D" />
       </concept>
+      <concept id="1082978499127" name="jetbrains.mps.lang.structure.structure.ConstrainedDataTypeDeclaration" flags="ng" index="Az7Fb">
+        <property id="1083066089218" name="constraint" index="FLfZY" />
+      </concept>
       <concept id="1169125787135" name="jetbrains.mps.lang.structure.structure.AbstractConceptDeclaration" flags="ig" index="PkWjJ">
         <property id="6714410169261853888" name="conceptId" index="EcuMT" />
         <property id="5092175715804935370" name="conceptAlias" index="34LRSv" />
@@ -123,7 +126,7 @@
     <node concept="1TJgyi" id="71M7ab0UvxX" role="1TKVEl">
       <property role="IQ2nx" value="8102570164939782269" />
       <property role="TrG5h" value="name" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+      <ref role="AX2Wp" node="14DBlPS2jq2" resolve="entity_name" />
     </node>
     <node concept="1TJgyj" id="71M7ab0UQw8" role="1TKVEi">
       <property role="IQ2ns" value="8102570164939876360" />
@@ -145,12 +148,106 @@
     <node concept="1TJgyi" id="71M7ab0UPsT" role="1TKVEl">
       <property role="IQ2nx" value="8102570164939872057" />
       <property role="TrG5h" value="type" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+      <ref role="AX2Wp" node="14DBlPS2m9s" resolve="attribute_types" />
     </node>
     <node concept="1TJgyi" id="71M7ab0UPBV" role="1TKVEl">
       <property role="IQ2nx" value="8102570164939872763" />
       <property role="TrG5h" value="proprity" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="Az7Fb" id="14DBlPS2jq2">
+    <property role="3F6X1D" value="1236692597461300866" />
+    <property role="TrG5h" value="entity_name" />
+    <property role="FLfZY" value="[A-Z][a-z]*" />
+  </node>
+  <node concept="25R3W" id="14DBlPS2m9s">
+    <property role="3F6X1D" value="1236692597461312092" />
+    <property role="TrG5h" value="attribute_types" />
+    <node concept="25R33" id="14DBlPS2m9t" role="25R1y">
+      <property role="3tVfz5" value="1236692597461312093" />
+      <property role="TrG5h" value="String" />
+      <property role="1L1pqM" value="String" />
+    </node>
+    <node concept="25R33" id="14DBlPS2mkt" role="25R1y">
+      <property role="3tVfz5" value="1236692597461312797" />
+      <property role="TrG5h" value="Integer" />
+      <property role="1L1pqM" value="Integer" />
+    </node>
+    <node concept="25R33" id="14DBlPS2mpO" role="25R1y">
+      <property role="3tVfz5" value="1236692597461313140" />
+      <property role="TrG5h" value="Long" />
+      <property role="1L1pqM" value="Long" />
+    </node>
+    <node concept="25R33" id="14DBlPS2mrw" role="25R1y">
+      <property role="3tVfz5" value="1236692597461313248" />
+      <property role="TrG5h" value="BigDecimal" />
+      <property role="1L1pqM" value="BigDecimal" />
+    </node>
+    <node concept="25R33" id="14DBlPS2mvh" role="25R1y">
+      <property role="3tVfz5" value="1236692597461313489" />
+      <property role="TrG5h" value="Float" />
+      <property role="1L1pqM" value="Float" />
+    </node>
+    <node concept="25R33" id="14DBlPS2mxO" role="25R1y">
+      <property role="3tVfz5" value="1236692597461313652" />
+      <property role="TrG5h" value="Double" />
+      <property role="1L1pqM" value="Double" />
+    </node>
+    <node concept="25R33" id="14DBlPS2m_c" role="25R1y">
+      <property role="3tVfz5" value="1236692597461313868" />
+      <property role="TrG5h" value="Enum" />
+      <property role="1L1pqM" value="Enum" />
+    </node>
+    <node concept="25R33" id="14DBlPS2mBL" role="25R1y">
+      <property role="3tVfz5" value="1236692597461314033" />
+      <property role="TrG5h" value="Boolean" />
+      <property role="1L1pqM" value="Boolean" />
+    </node>
+    <node concept="25R33" id="14DBlPS2mEL" role="25R1y">
+      <property role="3tVfz5" value="1236692597461314225" />
+      <property role="TrG5h" value="LocalDate" />
+      <property role="1L1pqM" value="LocalDate" />
+    </node>
+    <node concept="25R33" id="14DBlPS2mGz" role="25R1y">
+      <property role="3tVfz5" value="1236692597461314339" />
+      <property role="TrG5h" value="ZonedDateTime" />
+      <property role="1L1pqM" value="ZonedDateTime" />
+    </node>
+    <node concept="25R33" id="14DBlPS2mKO" role="25R1y">
+      <property role="3tVfz5" value="1236692597461314612" />
+      <property role="TrG5h" value="Instant" />
+      <property role="1L1pqM" value="Instant" />
+    </node>
+    <node concept="25R33" id="14DBlPS2mN2" role="25R1y">
+      <property role="3tVfz5" value="1236692597461314754" />
+      <property role="TrG5h" value="Duration" />
+      <property role="1L1pqM" value="Duration" />
+    </node>
+    <node concept="25R33" id="14DBlPS2mQ6" role="25R1y">
+      <property role="3tVfz5" value="1236692597461314950" />
+      <property role="TrG5h" value="UUID" />
+      <property role="1L1pqM" value="UUID" />
+    </node>
+    <node concept="25R33" id="14DBlPS2mTb" role="25R1y">
+      <property role="3tVfz5" value="1236692597461315147" />
+      <property role="TrG5h" value="Blob" />
+      <property role="1L1pqM" value="Blob" />
+    </node>
+    <node concept="25R33" id="14DBlPS2mXU" role="25R1y">
+      <property role="3tVfz5" value="1236692597461315450" />
+      <property role="TrG5h" value="AnyBlob" />
+      <property role="1L1pqM" value="AnyBlob" />
+    </node>
+    <node concept="25R33" id="14DBlPS2n1Q" role="25R1y">
+      <property role="3tVfz5" value="1236692597461315702" />
+      <property role="TrG5h" value="ImageBlob" />
+      <property role="1L1pqM" value="ImageBlob" />
+    </node>
+    <node concept="25R33" id="14DBlPS2n3J" role="25R1y">
+      <property role="3tVfz5" value="1236692597461315823" />
+      <property role="TrG5h" value="TextBlob" />
+      <property role="1L1pqM" value="TextBlob" />
     </node>
   </node>
 </model>

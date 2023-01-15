@@ -5,6 +5,8 @@ package json.structure;
 import jetbrains.mps.smodel.runtime.BaseStructureAspectDescriptor;
 import jetbrains.mps.smodel.runtime.ConceptDescriptor;
 import jetbrains.mps.smodel.runtime.EnumerationDescriptor;
+import jetbrains.mps.smodel.runtime.ConstrainedStringDatatypeDescriptor;
+import jetbrains.mps.smodel.runtime.ConstrainedStringDatatypeDescriptorImpl;
 import java.util.Collection;
 import java.util.Arrays;
 import org.jetbrains.annotations.Nullable;
@@ -12,8 +14,8 @@ import jetbrains.mps.smodel.adapter.ids.SConceptId;
 import jetbrains.mps.smodel.runtime.DataTypeDescriptor;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
-import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
 import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
+import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptEntity = createDescriptorForEntity();
@@ -21,6 +23,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptconf = createDescriptorForconf();
   /*package*/ final ConceptDescriptor myConceptfile = createDescriptorForfile();
   /*package*/ final EnumerationDescriptor myEnumerationapplicationType = new EnumerationDescriptor_applicationType();
+  /*package*/ final EnumerationDescriptor myEnumerationattribute_types = new EnumerationDescriptor_attribute_types();
+  /*package*/ final ConstrainedStringDatatypeDescriptor myCSDatatypeentity_name = new ConstrainedStringDatatypeDescriptorImpl(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x11299d5d78093682L, "entity_name", "r:d7a2d3ee-8e24-49f3-b446-7a6ae06181e3(json.structure)/1236692597461300866", "[A-Z][a-z]*");
   private final LanguageConceptSwitch myIndexSwitch;
 
   public StructureAspectDescriptor() {
@@ -57,7 +61,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<DataTypeDescriptor> getDataTypeDescriptors() {
-    return Arrays.asList(myEnumerationapplicationType);
+    return Arrays.asList(myEnumerationapplicationType, myEnumerationattribute_types, myCSDatatypeentity_name);
   }
 
   /*package*/ int internalIndex(SAbstractConcept c) {
@@ -69,7 +73,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     b.origin("r:d7a2d3ee-8e24-49f3-b446-7a6ae06181e3(json.structure)/8102570164939781462");
     b.version(3);
-    b.property("name", 0x70721ca2c0e9f87dL).type(PrimitiveTypeId.STRING).origin("8102570164939782269").done();
+    b.property("name", 0x70721ca2c0e9f87dL).type(MetaIdFactory.dataTypeId(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x11299d5d78093682L)).origin("8102570164939782269").done();
     b.aggregate("attribute", 0x70721ca2c0eb6808L).target(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x70721ca2c0eb538eL).optional(true).ordered(true).multiple(true).origin("8102570164939876360").done();
     b.alias("entity");
     return b.create();
@@ -80,7 +84,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:d7a2d3ee-8e24-49f3-b446-7a6ae06181e3(json.structure)/8102570164939871118");
     b.version(3);
     b.property("name", 0x70721ca2c0eb5563L).type(PrimitiveTypeId.STRING).origin("8102570164939871587").done();
-    b.property("type", 0x70721ca2c0eb5739L).type(PrimitiveTypeId.STRING).origin("8102570164939872057").done();
+    b.property("type", 0x70721ca2c0eb5739L).type(MetaIdFactory.dataTypeId(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x11299d5d7809625cL)).origin("8102570164939872057").done();
     b.property("proprity", 0x70721ca2c0eb59fbL).type(PrimitiveTypeId.STRING).origin("8102570164939872763").done();
     return b.create();
   }
