@@ -14,37 +14,49 @@ public class conf_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
-    tgs.indent();
-    tgs.append("application ");
+    tgs.append("application");
     tgs.newLine();
     tgs.append("{");
     tgs.newLine();
+    ctx.getBuffer().area().increaseIndent();
     tgs.indent();
     tgs.append("config");
     tgs.newLine();
+    tgs.indent();
     tgs.append("{");
     tgs.newLine();
+    ctx.getBuffer().area().decreaseIndent();
+    ctx.getBuffer().area().increaseIndent();
     tgs.indent();
-    tgs.append("baseName : ");
+    tgs.append("baseName  : ");
     tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.baseName$cpeK));
     tgs.newLine();
+    tgs.indent();
     tgs.append("applicationType : ");
     tgs.append(SEnumOperations.getMemberName0(SPropertyOperations.getEnum(ctx.getPrimaryInput(), PROPS.applicationType$$fEq)));
     tgs.newLine();
+    tgs.indent();
     tgs.append("packageName : ");
     tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.packageName$vcje));
     tgs.newLine();
+    tgs.indent();
     tgs.append("authenticationType : ");
     tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.authenticationType$nk4d));
     tgs.newLine();
+    tgs.indent();
     tgs.append("prodDatabaseType : ");
     tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.prodDatabaseType$btiq));
     tgs.newLine();
+    tgs.indent();
     tgs.append("clientFramework : ");
     tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.clientFramework$re5W));
     tgs.newLine();
+    ctx.getBuffer().area().decreaseIndent();
+    ctx.getBuffer().area().increaseIndent();
+    tgs.indent();
     tgs.append("}");
     tgs.newLine();
+    ctx.getBuffer().area().decreaseIndent();
     tgs.append("}");
 
   }
