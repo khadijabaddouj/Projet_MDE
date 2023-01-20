@@ -56,6 +56,33 @@
       <property role="2KFmUr" value="react" />
       <property role="1XDqD9" value="*" />
     </node>
+    <node concept="2KFkhm" id="FxBlXfJYFF" role="2KFmhm">
+      <property role="2KFklB" value="microsevice" />
+      <property role="2KFk2l" value="71M7ab0TS4I/microservice" />
+      <property role="2KFnKU" value="dkdl" />
+      <property role="2KFn_C" value="dldld" />
+      <property role="2KFnsV" value="dldl" />
+      <property role="2KFmUr" value="dkdl" />
+      <property role="1XDqD9" value="A" />
+    </node>
+    <node concept="2KFkhm" id="FxBlXfJYFI" role="2KFmhm">
+      <property role="2KFklB" value="hdjdj" />
+      <property role="2KFk2l" value="71M7ab0TS4I/microservice" />
+      <property role="2KFnKU" value="fkfk" />
+      <property role="2KFn_C" value="jwt" />
+      <property role="2KFnsV" value="djdk" />
+      <property role="2KFmUr" value="ejej" />
+      <property role="1XDqD9" value="B" />
+    </node>
+    <node concept="2KFkhm" id="FxBlXfJYFM" role="2KFmhm">
+      <property role="2KFklB" value="dkdk" />
+      <property role="2KFk2l" value="71M7ab0TS4I/microservice" />
+      <property role="2KFnKU" value="ddkdd" />
+      <property role="2KFn_C" value="dkdk" />
+      <property role="2KFnsV" value="dkdk" />
+      <property role="2KFmUr" value="mdjd" />
+      <property role="1XDqD9" value="A,C" />
+    </node>
     <node concept="2KAYBO" id="FxBlXfJXXP" role="2KAYaU">
       <property role="2KAYjv" value="A" />
       <node concept="2KAkWG" id="FxBlXfJXXR" role="2KAniE">
@@ -70,6 +97,14 @@
         <property role="2KAkB1" value="name" />
         <property role="2KAkIr" value="14DBlPS2m9t/String" />
         <property role="2KAklp" value="required" />
+      </node>
+    </node>
+    <node concept="2KAYBO" id="FxBlXfJYH5" role="2KAYaU">
+      <property role="2KAYjv" value="C" />
+      <node concept="2KAkWG" id="FxBlXfJYHb" role="2KAniE">
+        <property role="2KAkB1" value="HSJSJ" />
+        <property role="2KAkIr" value="14DBlPS2m9t/String" />
+        <property role="2KAklp" value="hdjd" />
       </node>
     </node>
     <node concept="1D8EOG" id="FxBlXfJXY3" role="1D9cAM">
@@ -87,6 +122,11 @@
       <property role="15hiAG" value="FxBlXfDbiI/OneToOne" />
       <ref role="15hia3" node="FxBlXfJXXP" />
       <ref role="15hz8x" node="FxBlXfJXXX" />
+    </node>
+    <node concept="15hiYI" id="FxBlXfLD27" role="15h2mf">
+      <property role="15hiAG" value="FxBlXfDbiP/ManyToOne" />
+      <ref role="15hia3" node="FxBlXfJXXX" />
+      <ref role="15hz8x" node="FxBlXfJXXP" />
     </node>
   </node>
   <node concept="2KDQt6" id="7W$TWW7DttC">

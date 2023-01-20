@@ -25,7 +25,6 @@ import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
 import jetbrains.mps.openapi.editor.cells.CellActionType;
 import jetbrains.mps.nodeEditor.cellActions.CellAction_DeleteNode;
 import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Vertical;
-import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Horizontal;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SConcept;
 
@@ -67,7 +66,6 @@ import org.jetbrains.mps.openapi.language.SConcept;
       editorCell.addEditorCell(createConstant_3());
     }
     editorCell.addEditorCell(createCollection_4());
-    editorCell.addEditorCell(createConstant_4());
     return editorCell;
   }
   private boolean nodeCondition_5xx7fc_a2a() {
@@ -373,16 +371,12 @@ import org.jetbrains.mps.openapi.language.SConcept;
   private EditorCell createCollection_4() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Vertical());
     editorCell.setCellId("Collection_5xx7fc_h0");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.SELECTABLE, false);
-    style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
-    editorCell.getStyle().putAll(style);
     editorCell.addEditorCell(createRefNodeList_3());
     return editorCell;
   }
   private EditorCell createRefNodeList_3() {
     AbstractCellListHandler handler = new relationshipListHandler_5xx7fc_a7a(myNode, getEditorContext());
-    EditorCell_Collection editorCell = handler.createCells(new CellLayout_Horizontal(), false);
+    EditorCell_Collection editorCell = handler.createCells(new CellLayout_Vertical(), false);
     editorCell.setCellId("refNodeList_relationship");
     editorCell.setSRole(handler.getElementSRole());
     return editorCell;
@@ -453,12 +447,6 @@ import org.jetbrains.mps.openapi.language.SConcept;
         }
       }
     }
-  }
-  private EditorCell createConstant_4() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "}");
-    editorCell.setCellId("Constant_5xx7fc_i0");
-    editorCell.setDefaultText("");
-    return editorCell;
   }
 
   private static final class LINKS {
