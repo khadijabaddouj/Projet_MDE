@@ -31,6 +31,10 @@
         <child id="1068580123156" name="expression" index="3clFbG" />
       </concept>
       <concept id="1068580123157" name="jetbrains.mps.baseLanguage.structure.Statement" flags="nn" index="3clFbH" />
+      <concept id="1068580123159" name="jetbrains.mps.baseLanguage.structure.IfStatement" flags="nn" index="3clFbJ">
+        <child id="1068580123160" name="condition" index="3clFbw" />
+        <child id="1068580123161" name="ifTrue" index="3clFbx" />
+      </concept>
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
       </concept>
@@ -75,6 +79,7 @@
     </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
       <concept id="1966870290083281362" name="jetbrains.mps.lang.smodel.structure.EnumMember_NameOperation" flags="ng" index="24Tkf9" />
+      <concept id="7236635212850979475" name="jetbrains.mps.lang.smodel.structure.Node_HasNextSiblingOperation" flags="nn" index="rvlfL" />
       <concept id="1138056022639" name="jetbrains.mps.lang.smodel.structure.SPropertyAccess" flags="nn" index="3TrcHB">
         <reference id="1138056395725" name="property" index="3TsBF5" />
       </concept>
@@ -517,9 +522,19 @@
                           <property role="lacIc" value=" )" />
                         </node>
                       </node>
-                      <node concept="lc7rE" id="2VKtDE9fp7v" role="3cqZAp">
-                        <node concept="la8eA" id="2VKtDE9fpin" role="lcghm">
-                          <property role="lacIc" value="," />
+                      <node concept="3clFbJ" id="FxBlXfCY5U" role="3cqZAp">
+                        <node concept="3clFbS" id="FxBlXfCY5W" role="3clFbx">
+                          <node concept="lc7rE" id="FxBlXfCZ1y" role="3cqZAp">
+                            <node concept="la8eA" id="FxBlXfCZb8" role="lcghm">
+                              <property role="lacIc" value="," />
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="2OqwBi" id="FxBlXfCYxs" role="3clFbw">
+                          <node concept="37vLTw" id="FxBlXfCYff" role="2Oq$k0">
+                            <ref role="3cqZAo" node="2VKtDE9fkFG" resolve="enum_attribute" />
+                          </node>
+                          <node concept="rvlfL" id="FxBlXfCYRZ" role="2OqNvi" />
                         </node>
                       </node>
                     </node>

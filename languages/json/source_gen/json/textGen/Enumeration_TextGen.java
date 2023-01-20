@@ -10,6 +10,7 @@ import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.IVisitor;
 import org.jetbrains.mps.openapi.model.SNode;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import org.jetbrains.mps.openapi.language.SProperty;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
@@ -30,7 +31,9 @@ public class Enumeration_TextGen extends TextGenDescriptorBase {
         tgs.append("( ");
         tgs.append(SPropertyOperations.getString(enum_attribute, PROPS.enumValue$7s1E));
         tgs.append(" )");
-        tgs.append(",");
+        if (SNodeOperations.getNextSibling(enum_attribute) != null) {
+          tgs.append(",");
+        }
       }
     });
     ctx.getBuffer().area().decreaseIndent();
