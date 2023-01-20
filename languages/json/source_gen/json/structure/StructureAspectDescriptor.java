@@ -23,9 +23,11 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptEntity_attribute = createDescriptorForEntity_attribute();
   /*package*/ final ConceptDescriptor myConceptEnum_attribute = createDescriptorForEnum_attribute();
   /*package*/ final ConceptDescriptor myConceptEnumeration = createDescriptorForEnumeration();
+  /*package*/ final ConceptDescriptor myConceptRelationship = createDescriptorForRelationship();
   /*package*/ final ConceptDescriptor myConceptfile = createDescriptorForfile();
   /*package*/ final EnumerationDescriptor myEnumerationapplicationtype_supported = new EnumerationDescriptor_applicationtype_supported();
   /*package*/ final EnumerationDescriptor myEnumerationattribute_types_supported = new EnumerationDescriptor_attribute_types_supported();
+  /*package*/ final EnumerationDescriptor myEnumerationrelationship_types = new EnumerationDescriptor_relationship_types();
   /*package*/ final ConstrainedStringDatatypeDescriptor myCSDatatypeentity_name_regex = new ConstrainedStringDatatypeDescriptorImpl(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x11299d5d78093682L, "entity_name_regex", "r:d7a2d3ee-8e24-49f3-b446-7a6ae06181e3(json.structure)/1236692597461300866", "[A-Z][a-z]*");
   /*package*/ final ConstrainedStringDatatypeDescriptor myCSDatatypeenumkey_regex = new ConstrainedStringDatatypeDescriptorImpl(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x2ef0769a893a53e5L, "enumkey_regex", "r:d7a2d3ee-8e24-49f3-b446-7a6ae06181e3(json.structure)/3382333726254584805", "[A-Z]*");
   private final LanguageConceptSwitch myIndexSwitch;
@@ -42,7 +44,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptConfiguration, myConceptEntity, myConceptEntity_attribute, myConceptEnum_attribute, myConceptEnumeration, myConceptfile);
+    return Arrays.asList(myConceptConfiguration, myConceptEntity, myConceptEntity_attribute, myConceptEnum_attribute, myConceptEnumeration, myConceptRelationship, myConceptfile);
   }
 
   @Override
@@ -59,6 +61,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptEnum_attribute;
       case LanguageConceptSwitch.Enumeration:
         return myConceptEnumeration;
+      case LanguageConceptSwitch.Relationship:
+        return myConceptRelationship;
       case LanguageConceptSwitch.file:
         return myConceptfile;
       default:
@@ -68,7 +72,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<DataTypeDescriptor> getDataTypeDescriptors() {
-    return Arrays.asList(myEnumerationapplicationtype_supported, myEnumerationattribute_types_supported, myCSDatatypeentity_name_regex, myCSDatatypeenumkey_regex);
+    return Arrays.asList(myEnumerationapplicationtype_supported, myEnumerationattribute_types_supported, myEnumerationrelationship_types, myCSDatatypeentity_name_regex, myCSDatatypeenumkey_regex);
   }
 
   /*package*/ int internalIndex(SAbstractConcept c) {
@@ -127,6 +131,16 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("enum_attribute", 0x11299d5d780c680dL).target(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x11299d5d780c6b1bL).optional(true).ordered(true).multiple(true).origin("1236692597461510157").done();
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForRelationship() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("json", "Relationship", 0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0xae19d5f4fa4b2f1L);
+    b.class_(false, false, false);
+    b.origin("r:d7a2d3ee-8e24-49f3-b446-7a6ae06181e3(json.structure)/784080842822824689");
+    b.version(3);
+    b.property("type", 0xae19d5f4fa4b4f3L).type(MetaIdFactory.dataTypeId(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0xae19d5f4fa4b4adL)).origin("784080842822825203").done();
+    b.associate("entity1", 0xae19d5f4fa4bfdcL).target(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x70721ca2c0e9f556L).optional(true).origin("784080842822827996").done();
+    b.associate("entity2", 0xae19d5f4fa7af7eL).target(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x70721ca2c0e9f556L).optional(true).origin("784080842823020414").done();
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForfile() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("json", "file", 0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x70721ca2c0d57be4L);
     b.class_(false, false, true);
@@ -135,6 +149,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("conf", 0x70721ca2c0df78f4L).target(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x70721ca2c0df58f4L).optional(true).ordered(true).multiple(true).origin("8102570164939094260").done();
     b.aggregate("enum", 0x11299d5d780d54efL).target(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x11299d5d780b3071L).optional(true).ordered(true).multiple(true).origin("1236692597461570799").done();
     b.aggregate("entity", 0x70721ca2c0e9fe18L).target(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x70721ca2c0e9f556L).optional(true).ordered(true).multiple(true).origin("8102570164939783704").done();
+    b.aggregate("relationship", 0xae19d5f4fa5b8d0L).target(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0xae19d5f4fa4b2f1L).optional(true).ordered(true).multiple(true).origin("784080842822891728").done();
     return b.create();
   }
 }

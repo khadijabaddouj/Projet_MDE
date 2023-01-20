@@ -14,6 +14,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Entity_attribute;
   private ConceptPresentation props_Enum_attribute;
   private ConceptPresentation props_Enumeration;
+  private ConceptPresentation props_Relationship;
   private ConceptPresentation props_file;
 
   @Override
@@ -56,6 +57,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Enumeration = cpb.create();
         }
         return props_Enumeration;
+      case LanguageConceptSwitch.Relationship:
+        if (props_Relationship == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Relationship");
+          props_Relationship = cpb.create();
+        }
+        return props_Relationship;
       case LanguageConceptSwitch.file:
         if (props_file == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

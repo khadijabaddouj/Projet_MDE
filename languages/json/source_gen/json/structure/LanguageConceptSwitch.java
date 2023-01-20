@@ -14,7 +14,8 @@ public final class LanguageConceptSwitch {
   public static final int Entity_attribute = 2;
   public static final int Enum_attribute = 3;
   public static final int Enumeration = 4;
-  public static final int file = 5;
+  public static final int Relationship = 5;
+  public static final int file = 6;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L);
@@ -23,6 +24,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x70721ca2c0eb538eL, Entity_attribute);
     builder.put(0x11299d5d780c6b1bL, Enum_attribute);
     builder.put(0x11299d5d780b3071L, Enumeration);
+    builder.put(0xae19d5f4fa4b2f1L, Relationship);
     builder.put(0x70721ca2c0d57be4L, file);
     myIndex = builder.seal();
   }

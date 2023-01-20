@@ -76,6 +76,13 @@
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="71M7ab0Uvlm" resolve="Entity" />
     </node>
+    <node concept="1TJgyj" id="FxBlXfDrzg" role="1TKVEi">
+      <property role="IQ2ns" value="784080842822891728" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="relationship" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="FxBlXfDbbL" resolve="Relationship" />
+    </node>
   </node>
   <node concept="1TIwiD" id="71M7ab0RPzO">
     <property role="EcuMT" value="8102570164939086068" />
@@ -299,6 +306,50 @@
     <property role="3F6X1D" value="3382333726254584805" />
     <property role="TrG5h" value="enumkey_regex" />
     <property role="FLfZY" value="[A-Z]*" />
+  </node>
+  <node concept="1TIwiD" id="FxBlXfDbbL">
+    <property role="EcuMT" value="784080842822824689" />
+    <property role="TrG5h" value="Relationship" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyi" id="FxBlXfDbjN" role="1TKVEl">
+      <property role="IQ2nx" value="784080842822825203" />
+      <property role="TrG5h" value="type" />
+      <ref role="AX2Wp" node="FxBlXfDbiH" resolve="relationship_types" />
+    </node>
+    <node concept="1TJgyj" id="FxBlXfDbZs" role="1TKVEi">
+      <property role="IQ2ns" value="784080842822827996" />
+      <property role="20kJfa" value="entity1" />
+      <ref role="20lvS9" node="71M7ab0Uvlm" resolve="Entity" />
+    </node>
+    <node concept="1TJgyj" id="FxBlXfDUXY" role="1TKVEi">
+      <property role="IQ2ns" value="784080842823020414" />
+      <property role="20kJfa" value="entity2" />
+      <ref role="20lvS9" node="71M7ab0Uvlm" resolve="Entity" />
+    </node>
+  </node>
+  <node concept="25R3W" id="FxBlXfDbiH">
+    <property role="3F6X1D" value="784080842822825133" />
+    <property role="TrG5h" value="relationship_types" />
+    <node concept="25R33" id="FxBlXfDbiI" role="25R1y">
+      <property role="3tVfz5" value="784080842822825134" />
+      <property role="TrG5h" value="OneToOne" />
+      <property role="1L1pqM" value="OneToOne" />
+    </node>
+    <node concept="25R33" id="FxBlXfDbiK" role="25R1y">
+      <property role="3tVfz5" value="784080842822825136" />
+      <property role="TrG5h" value="OneToMany" />
+      <property role="1L1pqM" value="OneToMany" />
+    </node>
+    <node concept="25R33" id="FxBlXfDbiP" role="25R1y">
+      <property role="3tVfz5" value="784080842822825141" />
+      <property role="TrG5h" value="ManyToOne" />
+      <property role="1L1pqM" value="ManyToOne " />
+    </node>
+    <node concept="25R33" id="FxBlXfDbiU" role="25R1y">
+      <property role="3tVfz5" value="784080842822825146" />
+      <property role="TrG5h" value="ManyToMany" />
+      <property role="1L1pqM" value="ManyToMany" />
+    </node>
   </node>
 </model>
 
