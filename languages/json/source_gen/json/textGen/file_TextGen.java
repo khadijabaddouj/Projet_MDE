@@ -15,9 +15,17 @@ public class file_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
-    for (SNode item : SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.conf$2x1p)) {
-      tgs.appendNode(item);
+    {
+      Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.conf$2x1p);
+      final SNode lastItem = Sequence.fromIterable(collection).last();
+      for (SNode item : collection) {
+        tgs.appendNode(item);
+        if (item != lastItem) {
+          tgs.append("\n");
+        }
+      }
     }
+    tgs.newLine();
     {
       Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.entity$QK3x);
       final SNode lastItem = Sequence.fromIterable(collection).last();
@@ -28,6 +36,7 @@ public class file_TextGen extends TextGenDescriptorBase {
         }
       }
     }
+    tgs.newLine();
     {
       Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.enum$FcY_);
       final SNode lastItem = Sequence.fromIterable(collection).last();
@@ -38,6 +47,7 @@ public class file_TextGen extends TextGenDescriptorBase {
         }
       }
     }
+    tgs.newLine();
   }
 
   private static final class LINKS {

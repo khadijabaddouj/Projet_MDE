@@ -32,14 +32,31 @@
     </language>
   </registry>
   <node concept="2KDQt6" id="7W$TWW7_P3Y">
-    <node concept="2KFkhm" id="11jNIydzJdi" role="2KFmhm">
-      <property role="2KFklB" value="kkk" />
+    <node concept="2KFkhm" id="FxBlXfA0F6" role="2KFmhm">
+      <property role="2KFklB" value="hjjd" />
       <property role="2KFk2l" value="71M7ab0TSgW/gateway" />
-      <property role="2KFnKU" value="fk" />
-      <property role="2KFn_C" value="fjfj" />
-      <property role="2KFnsV" value="fjfjfk" />
-      <property role="2KFmUr" value="fkkf" />
-      <property role="1XDqD9" value="entities *" />
+      <property role="2KFnKU" value="djdj" />
+      <property role="2KFn_C" value="dkdk" />
+      <property role="2KFnsV" value="djdj" />
+      <property role="2KFmUr" value="dkdk" />
+      <property role="1XDqD9" value="*" />
+    </node>
+    <node concept="2KFkhm" id="FxBlXfA0VK" role="2KFmhm">
+      <property role="2KFklB" value="JJJ" />
+      <property role="2KFk2l" value="71M7ab0TS4I/microservice" />
+      <property role="2KFnKU" value="kdkdk" />
+      <property role="2KFn_C" value="dkdk" />
+      <property role="2KFnsV" value="dkdk" />
+      <property role="2KFmUr" value="ddk" />
+      <property role="1XDqD9" value="A" />
+    </node>
+    <node concept="2KAYBO" id="FxBlXfA0VT" role="2KAYaU">
+      <property role="2KAYjv" value="A" />
+      <node concept="2KAkWG" id="FxBlXfA0VV" role="2KAniE">
+        <property role="2KAkB1" value="name" />
+        <property role="2KAkIr" value="14DBlPS2m9t/String" />
+        <property role="2KAklp" value="unique" />
+      </node>
     </node>
   </node>
   <node concept="2KDQt6" id="7W$TWW7DttC">
@@ -50,6 +67,7 @@
       <property role="2KFn_C" value="kkk" />
       <property role="2KFnsV" value="iii" />
       <property role="2KFmUr" value="ki" />
+      <property role="1XDqD9" value="*" />
     </node>
     <node concept="2KAYBO" id="7W$TWW7DtD3" role="2KAYaU">
       <property role="2KAYjv" value="Phhjj" />

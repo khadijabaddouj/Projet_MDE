@@ -39,7 +39,6 @@ public class Entity_TextGen extends TextGenDescriptorBase {
       }
     });
     ctx.getBuffer().area().decreaseIndent();
-    tgs.newLine();
     tgs.append("}");
   }
 

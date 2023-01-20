@@ -55,6 +55,7 @@
       </concept>
       <concept id="1237305557638" name="jetbrains.mps.lang.textGen.structure.ConstantStringAppendPart" flags="ng" index="la8eA">
         <property id="1237305576108" name="value" index="lacIc" />
+        <property id="1237306361677" name="withIndent" index="ldcpH" />
       </concept>
       <concept id="1237306079178" name="jetbrains.mps.lang.textGen.structure.AppendOperation" flags="nn" index="lc7rE">
         <child id="1237306115446" name="part" index="lcghm" />
@@ -125,6 +126,8 @@
       <node concept="3clFbS" id="71M7ab0Ts8T" role="2VODD2">
         <node concept="lc7rE" id="11jNIydz6kW" role="3cqZAp">
           <node concept="l9S2W" id="11jNIydz6vU" role="lcghm">
+            <property role="XA4eZ" value="true" />
+            <property role="lbP0B" value="\n" />
             <node concept="2OqwBi" id="11jNIydz6DM" role="lbANJ">
               <node concept="117lpO" id="11jNIydz6yq" role="2Oq$k0" />
               <node concept="3Tsc0h" id="11jNIydz70K" role="2OqNvi">
@@ -132,6 +135,7 @@
               </node>
             </node>
           </node>
+          <node concept="l8MVK" id="FxBlXfBVJY" role="lcghm" />
         </node>
         <node concept="lc7rE" id="14DBlPRYwuO" role="3cqZAp">
           <node concept="l9S2W" id="14DBlPRYycG" role="lcghm">
@@ -144,6 +148,7 @@
               </node>
             </node>
           </node>
+          <node concept="l8MVK" id="FxBlXfBVP2" role="lcghm" />
         </node>
         <node concept="lc7rE" id="2VKtDE9fTOt" role="3cqZAp">
           <node concept="l9S2W" id="2VKtDE9fX_c" role="lcghm">
@@ -156,6 +161,7 @@
               </node>
             </node>
           </node>
+          <node concept="l8MVK" id="FxBlXfBVVI" role="lcghm" />
         </node>
       </node>
     </node>
@@ -190,6 +196,8 @@
               </node>
               <node concept="l8MVK" id="14DBlPS0xKn" role="lcghm" />
             </node>
+            <node concept="1bpajm" id="FxBlXfAKP0" role="3cqZAp" />
+            <node concept="3clFbH" id="FxBlXfA0WL" role="3cqZAp" />
           </node>
         </node>
         <node concept="3izx1p" id="14DBlPRZZir" role="3cqZAp">
@@ -213,6 +221,7 @@
             <node concept="lc7rE" id="14DBlPS05oB" role="3cqZAp">
               <node concept="la8eA" id="14DBlPS05vu" role="lcghm">
                 <property role="lacIc" value="applicationType " />
+                <property role="ldcpH" value="true" />
               </node>
               <node concept="l9hG8" id="14DBlPS05M0" role="lcghm">
                 <node concept="2OqwBi" id="14DBlPS06CO" role="lb14g">
@@ -231,6 +240,7 @@
             <node concept="lc7rE" id="14DBlPS0gm1" role="3cqZAp">
               <node concept="la8eA" id="14DBlPS0gt4" role="lcghm">
                 <property role="lacIc" value="packageName " />
+                <property role="ldcpH" value="true" />
               </node>
               <node concept="l9hG8" id="14DBlPS0gLN" role="lcghm">
                 <node concept="2OqwBi" id="14DBlPS0gYg" role="lb14g">
@@ -246,6 +256,7 @@
             <node concept="lc7rE" id="14DBlPS0hTN" role="3cqZAp">
               <node concept="la8eA" id="14DBlPS0i0W" role="lcghm">
                 <property role="lacIc" value="authenticationType " />
+                <property role="ldcpH" value="true" />
               </node>
               <node concept="l9hG8" id="14DBlPS0ikG" role="lcghm">
                 <node concept="2OqwBi" id="14DBlPS0iwJ" role="lb14g">
@@ -261,6 +272,7 @@
             <node concept="lc7rE" id="14DBlPS0jp$" role="3cqZAp">
               <node concept="la8eA" id="14DBlPS0j_h" role="lcghm">
                 <property role="lacIc" value="prodDatabaseType " />
+                <property role="ldcpH" value="true" />
               </node>
               <node concept="l9hG8" id="14DBlPS0jYd" role="lcghm">
                 <node concept="2OqwBi" id="14DBlPS0kd6" role="lb14g">
@@ -276,6 +288,7 @@
             <node concept="lc7rE" id="14DBlPS0lgz" role="3cqZAp">
               <node concept="la8eA" id="14DBlPS0lsK" role="lcghm">
                 <property role="lacIc" value="clientFramework " />
+                <property role="ldcpH" value="true" />
               </node>
               <node concept="l9hG8" id="14DBlPS0lLb" role="lcghm">
                 <node concept="2OqwBi" id="14DBlPS0lY2" role="lb14g">
@@ -287,34 +300,35 @@
               </node>
               <node concept="l8MVK" id="14DBlPS0mz0" role="lcghm" />
             </node>
-          </node>
-        </node>
-        <node concept="3izx1p" id="14DBlPS0xWU" role="3cqZAp">
-          <node concept="3clFbS" id="14DBlPS0xWW" role="3izTki">
-            <node concept="1bpajm" id="14DBlPS0yft" role="3cqZAp" />
-            <node concept="lc7rE" id="14DBlPS0yl7" role="3cqZAp">
-              <node concept="la8eA" id="14DBlPS0yos" role="lcghm">
+            <node concept="1bpajm" id="FxBlXf_ezG" role="3cqZAp" />
+            <node concept="lc7rE" id="FxBlXf_eK8" role="3cqZAp">
+              <node concept="la8eA" id="FxBlXf_eVB" role="lcghm">
                 <property role="lacIc" value="}" />
               </node>
-              <node concept="l8MVK" id="14DBlPS0yy8" role="lcghm" />
+              <node concept="l8MVK" id="FxBlXf_fjf" role="lcghm" />
             </node>
-            <node concept="1bpajm" id="11jNIydyiI_" role="3cqZAp" />
-            <node concept="lc7rE" id="11jNIydyiNY" role="3cqZAp">
-              <node concept="l9hG8" id="11jNIydyiUd" role="lcghm">
-                <node concept="2OqwBi" id="11jNIydyj51" role="lb14g">
-                  <node concept="117lpO" id="11jNIydyiXd" role="2Oq$k0" />
-                  <node concept="3TrcHB" id="11jNIydyjmu" role="2OqNvi">
+            <node concept="1bpajm" id="FxBlXf_fac" role="3cqZAp" />
+            <node concept="lc7rE" id="FxBlXf_DAL" role="3cqZAp">
+              <node concept="la8eA" id="FxBlXf_DHj" role="lcghm">
+                <property role="lacIc" value="entities " />
+              </node>
+            </node>
+            <node concept="lc7rE" id="FxBlXf_fsF" role="3cqZAp">
+              <node concept="l9hG8" id="FxBlXf_f$a" role="lcghm">
+                <node concept="2OqwBi" id="FxBlXf_fJo" role="lb14g">
+                  <node concept="117lpO" id="FxBlXf_fB$" role="2Oq$k0" />
+                  <node concept="3TrcHB" id="FxBlXf_g1f" role="2OqNvi">
                     <ref role="3TsBF5" to="5eok:2hzUndpL$cU" resolve="entities" />
                   </node>
                 </node>
               </node>
+              <node concept="l8MVK" id="FxBlXf_gnU" role="lcghm" />
             </node>
-            <node concept="1bpajm" id="11jNIydyuTz" role="3cqZAp" />
-            <node concept="lc7rE" id="11jNIydyv1j" role="3cqZAp">
-              <node concept="la8eA" id="11jNIydyv6Z" role="lcghm">
-                <property role="lacIc" value="}" />
-              </node>
-            </node>
+          </node>
+        </node>
+        <node concept="lc7rE" id="FxBlXf_tg4" role="3cqZAp">
+          <node concept="la8eA" id="FxBlXf_toH" role="lcghm">
+            <property role="lacIc" value="}" />
           </node>
         </node>
         <node concept="3clFbH" id="71M7ab0TEJ_" role="3cqZAp" />
@@ -425,9 +439,6 @@
               </node>
             </node>
           </node>
-        </node>
-        <node concept="lc7rE" id="14DBlPRZH$7" role="3cqZAp">
-          <node concept="l8MVK" id="14DBlPRZHID" role="lcghm" />
         </node>
         <node concept="lc7rE" id="14DBlPRYvL4" role="3cqZAp">
           <node concept="la8eA" id="14DBlPRYvRr" role="lcghm">
