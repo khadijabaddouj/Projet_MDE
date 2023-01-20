@@ -63,7 +63,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "\"enum:\"");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "\"enum\":");
     editorCell.setCellId("Constant_x3qloy_a0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.TEXT_COLOR, StyleRegistry.getInstance().getSimpleColor(MPSColors.orange));
