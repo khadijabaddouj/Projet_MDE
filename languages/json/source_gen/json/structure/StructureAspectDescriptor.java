@@ -86,6 +86,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("authenticationType", 0x70721ca2c0df65caL).type(PrimitiveTypeId.STRING).origin("8102570164939089354").done();
     b.property("prodDatabaseType", 0x70721ca2c0df6b99L).type(PrimitiveTypeId.STRING).origin("8102570164939090841").done();
     b.property("clientFramework", 0x70721ca2c0df7239L).type(PrimitiveTypeId.STRING).origin("8102570164939092537").done();
+    b.property("entities", 0x2463e97359c6433aL).type(PrimitiveTypeId.STRING).origin("2622196089696437050").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForEntity() {
@@ -131,7 +132,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, true);
     b.origin("r:d7a2d3ee-8e24-49f3-b446-7a6ae06181e3(json.structure)/8102570164938439652");
     b.version(3);
-    b.aggregate("conf", 0x70721ca2c0df78f4L).target(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x70721ca2c0df58f4L).optional(true).ordered(true).multiple(false).origin("8102570164939094260").done();
+    b.aggregate("conf", 0x70721ca2c0df78f4L).target(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x70721ca2c0df58f4L).optional(true).ordered(true).multiple(true).origin("8102570164939094260").done();
     b.aggregate("enum", 0x11299d5d780d54efL).target(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x11299d5d780b3071L).optional(true).ordered(true).multiple(true).origin("1236692597461570799").done();
     b.aggregate("entity", 0x70721ca2c0e9fe18L).target(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x70721ca2c0e9f556L).optional(true).ordered(true).multiple(true).origin("8102570164939783704").done();
     return b.create();

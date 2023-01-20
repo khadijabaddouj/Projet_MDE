@@ -56,8 +56,11 @@ public class Configuration_TextGen extends TextGenDescriptorBase {
     tgs.indent();
     tgs.append("}");
     tgs.newLine();
-    ctx.getBuffer().area().decreaseIndent();
+    tgs.indent();
+    tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.entities$dnz8));
+    tgs.indent();
     tgs.append("}");
+    ctx.getBuffer().area().decreaseIndent();
 
   }
 
@@ -68,5 +71,6 @@ public class Configuration_TextGen extends TextGenDescriptorBase {
     /*package*/ static final SProperty authenticationType$nk4d = MetaAdapterFactory.getProperty(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x70721ca2c0df58f4L, 0x70721ca2c0df65caL, "authenticationType");
     /*package*/ static final SProperty prodDatabaseType$btiq = MetaAdapterFactory.getProperty(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x70721ca2c0df58f4L, 0x70721ca2c0df6b99L, "prodDatabaseType");
     /*package*/ static final SProperty clientFramework$re5W = MetaAdapterFactory.getProperty(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x70721ca2c0df58f4L, 0x70721ca2c0df7239L, "clientFramework");
+    /*package*/ static final SProperty entities$dnz8 = MetaAdapterFactory.getProperty(0x52d66a050b8e4c9cL, 0xa51ced22033bbbf3L, 0x70721ca2c0df58f4L, 0x2463e97359c6433aL, "entities");
   }
 }

@@ -59,6 +59,7 @@
       <property role="IQ2ns" value="8102570164939094260" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="conf" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="71M7ab0RPzO" resolve="Configuration" />
     </node>
     <node concept="1TJgyj" id="14DBlPS3ljJ" role="1TKVEi">
@@ -108,6 +109,11 @@
     <node concept="1TJgyi" id="71M7ab0RR8T" role="1TKVEl">
       <property role="IQ2nx" value="8102570164939092537" />
       <property role="TrG5h" value="clientFramework" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="2hzUndpL$cU" role="1TKVEl">
+      <property role="IQ2nx" value="2622196089696437050" />
+      <property role="TrG5h" value="entities" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>

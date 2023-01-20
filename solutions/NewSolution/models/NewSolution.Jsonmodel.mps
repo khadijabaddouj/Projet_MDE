@@ -19,7 +19,6 @@
       <concept id="8102570164938439652" name="json.structure.file" flags="ng" index="2KDQt6">
         <child id="8102570164939783704" name="entity" index="2KAYaU" />
         <child id="8102570164939094260" name="conf" index="2KFmhm" />
-        <child id="1236692597461570799" name="enum" index="1D9cAM" />
       </concept>
       <concept id="8102570164939086068" name="json.structure.Configuration" flags="ng" index="2KFkhm">
         <property id="8102570164939086903" name="applicationType" index="2KFk2l" />
@@ -28,47 +27,19 @@
         <property id="8102570164939090841" name="prodDatabaseType" index="2KFnsV" />
         <property id="8102570164939089354" name="authenticationType" index="2KFn_C" />
         <property id="8102570164939088024" name="packageName" index="2KFnKU" />
-      </concept>
-      <concept id="1236692597461430385" name="json.structure.Enumeration" flags="ng" index="1D8EOG">
-        <child id="1236692597461510157" name="enum_attribute" index="1D9vlg" />
-      </concept>
-      <concept id="1236692597461510939" name="json.structure.Enum_attribute" flags="ng" index="1D9vp6">
-        <property id="1236692597461520275" name="enumKey" index="1D9hbe" />
-        <property id="1236692597461532735" name="enumValue" index="1D9lPy" />
+        <property id="2622196089696437050" name="entities" index="1XDqD9" />
       </concept>
     </language>
   </registry>
   <node concept="2KDQt6" id="7W$TWW7_P3Y">
-    <node concept="1D8EOG" id="7W$TWW7DfKC" role="1D9cAM">
-      <node concept="1D9vp6" id="7W$TWW7DfN6" role="1D9vlg">
-        <property role="1D9hbe" value="HJJ" />
-        <property role="1D9lPy" value="Hhj" />
-      </node>
-      <node concept="1D9vp6" id="7W$TWW7DfQM" role="1D9vlg">
-        <property role="1D9hbe" value="HJDJD" />
-        <property role="1D9lPy" value="ndjdjj" />
-      </node>
-    </node>
-    <node concept="2KFkhm" id="7W$TWW7DfVH" role="2KFmhm">
-      <property role="2KFklB" value="jdjd" />
+    <node concept="2KFkhm" id="11jNIydzJdi" role="2KFmhm">
+      <property role="2KFklB" value="kkk" />
       <property role="2KFk2l" value="71M7ab0TSgW/gateway" />
-      <property role="2KFnKU" value="djd.ckck" />
-      <property role="2KFn_C" value="hsj" />
-      <property role="2KFnsV" value="ksksksjs" />
-      <property role="2KFmUr" value="ksiis" />
-    </node>
-    <node concept="2KAYBO" id="7W$TWW7Dg7x" role="2KAYaU">
-      <property role="2KAYjv" value="Pjdjd" />
-      <node concept="2KAkWG" id="7W$TWW7Dgcr" role="2KAniE">
-        <property role="2KAkB1" value="ddkd" />
-        <property role="2KAkIr" value="14DBlPS2m9t/String" />
-        <property role="2KAklp" value="dkdkd" />
-      </node>
-      <node concept="2KAkWG" id="7W$TWW7Dsny" role="2KAniE">
-        <property role="2KAkB1" value="JJJ" />
-        <property role="2KAkIr" value="14DBlPS2mkt/Integer" />
-        <property role="2KAklp" value="dkdkdk" />
-      </node>
+      <property role="2KFnKU" value="fk" />
+      <property role="2KFn_C" value="fjfj" />
+      <property role="2KFnsV" value="fjfjfk" />
+      <property role="2KFmUr" value="fkkf" />
+      <property role="1XDqD9" value="entities *" />
     </node>
   </node>
   <node concept="2KDQt6" id="7W$TWW7DttC">

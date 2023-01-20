@@ -5,8 +5,8 @@ package json.textGen;
 import jetbrains.mps.text.rt.TextGenDescriptorBase;
 import jetbrains.mps.text.rt.TextGenContext;
 import jetbrains.mps.text.impl.TextGenSupport;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import org.jetbrains.mps.openapi.model.SNode;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.Sequence;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
@@ -15,8 +15,9 @@ public class file_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
-    tgs.appendNode(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.conf$2x1p));
-    tgs.newLine();
+    for (SNode item : SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.conf$2x1p)) {
+      tgs.appendNode(item);
+    }
     {
       Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.entity$QK3x);
       final SNode lastItem = Sequence.fromIterable(collection).last();
